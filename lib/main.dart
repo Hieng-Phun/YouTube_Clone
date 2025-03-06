@@ -67,7 +67,7 @@ class _YouTubeState extends State<YouTube> {
     );
 
     // Title in Appbar
-    var title = Row(
+    final title = Row(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Image.network(
@@ -80,6 +80,21 @@ class _YouTubeState extends State<YouTube> {
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
         ),
       ],
+    );
+
+    // continue watching
+    final watching = Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            "Continue watching",
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+          ),
+          IconButton(onPressed: () {}, icon: Icon(Icons.more_vert)),
+        ],
+      ),
     );
 
     // Full App
@@ -105,25 +120,7 @@ class _YouTubeState extends State<YouTube> {
               listItems,
 
               //list watching
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 15,
-                  vertical: 5,
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Continue watching",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18,
-                      ),
-                    ),
-                    IconButton(onPressed: () {}, icon: Icon(Icons.more_vert)),
-                  ],
-                ),
-              ),
+              watching,
 
               // watching videos
               SizedBox(
@@ -151,18 +148,18 @@ class _YouTubeState extends State<YouTube> {
                           spacingHerizontal8,
                           Text(
                             "TechTV",
-                            style: TextStyle(color: Colors.black45),
+                            style: TextStyle(color: Colors.black87),
                           ),
                           Row(
                             children: [
                               Text(
-                                "1.8 views",
-                                style: TextStyle(color: Colors.black54),
+                                "1.8 views .",
+                                style: TextStyle(color: Colors.black87),
                               ),
                               spacingVertical8,
                               Text(
                                 "2 years ago",
-                                style: TextStyle(color: Colors.black54),
+                                style: TextStyle(color: Colors.black87),
                               ),
                             ],
                           ),
@@ -189,18 +186,18 @@ class _YouTubeState extends State<YouTube> {
                           spacingHerizontal8,
                           Text(
                             "TechTV",
-                            style: TextStyle(color: Colors.black45),
+                            style: TextStyle(color: Colors.black87),
                           ),
                           Row(
                             children: [
                               Text(
-                                "1.8 views",
-                                style: TextStyle(color: Colors.black54),
+                                "1.8 views .",
+                                style: TextStyle(color: Colors.black87),
                               ),
                               spacingVertical8,
                               Text(
                                 "2 years ago",
-                                style: TextStyle(color: Colors.black54),
+                                style: TextStyle(color: Colors.black87),
                               ),
                             ],
                           ),
@@ -227,18 +224,18 @@ class _YouTubeState extends State<YouTube> {
                           spacingHerizontal8,
                           Text(
                             "TechTV",
-                            style: TextStyle(color: Colors.black45),
+                            style: TextStyle(color: Colors.black87),
                           ),
                           Row(
                             children: [
                               Text(
-                                "1.8 views",
-                                style: TextStyle(color: Colors.black54),
+                                "1.8 views .",
+                                style: TextStyle(color: Colors.black87),
                               ),
                               spacingVertical8,
                               Text(
                                 "2 years ago",
-                                style: TextStyle(color: Colors.black54),
+                                style: TextStyle(color: Colors.black87),
                               ),
                             ],
                           ),
@@ -261,7 +258,11 @@ class _YouTubeState extends State<YouTube> {
                     padding: const EdgeInsets.symmetric(horizontal: 10),
                     child: Row(
                       children: [
-                        CircleAvatar(),
+                        CircleAvatar(
+                          backgroundImage: NetworkImage(
+                            "https://yt3.ggpht.com/ytc/AIdro_npFWbVLkf5w7W4Wd-b-prz4mG9ZXepu6U_T3C7Sixgtg=s88-c-k-c0x00ffffff-no-rj",
+                          ),
+                        ),
                         spacingVertical10,
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -275,17 +276,17 @@ class _YouTubeState extends State<YouTube> {
                               children: [
                                 Text(
                                   "My Khmer Song .",
-                                  style: TextStyle(color: Colors.black45),
+                                  style: TextStyle(color: Colors.black87),
                                 ),
                                 spacingVertical8,
                                 Text(
                                   "54K views .",
-                                  style: TextStyle(color: Colors.black54),
+                                  style: TextStyle(color: Colors.black87),
                                 ),
                                 spacingVertical8,
                                 Text(
                                   "4 years ago",
-                                  style: TextStyle(color: Colors.black54),
+                                  style: TextStyle(color: Colors.black87),
                                 ),
                               ],
                             ),
